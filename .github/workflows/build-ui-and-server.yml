@@ -110,8 +110,8 @@ jobs:
         run: |
           make server-stg &
           sleep 90
-      - name: Install Playwright
-        run: npm install @playwright/test
+      - name: Install Meshery UI dependencies
+        run: npm ci
         working-directory: ui
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
